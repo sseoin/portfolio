@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
 
-    <title>Hello, world!</title>
+    <title>Sarah Han</title>
   </head>
   <body>
     <header>
@@ -40,6 +41,30 @@
     <script src="node_modules/underscore/underscore-min.js"></script>
     <script src="node_modules/backbone/backbone-min.js"></script>
     <script src="js/core.js"></script>
+    <script type='text/template' id='project-overview-template'>
+      <div class="row no-gutters">
+        <div class="col">
+          <div class="card-cell first-img">
+            <div class="img-overlay">
+              <span class="img-overlay-text">
+                <%= firstImgOverlayText %>
+              </span>
+            </div>
+            <img class="img-fluid" src="<%= firstImgUrl %>" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-cell second-img">
+            <div class="img-overlay">
+              <span class="img-overlay-text">
+                <%= secondImgOverlayText %>
+              </span>
+            </div>
+            <img class="img-fluid" src="<%= secondImgUrl %>" />
+          </div>
+        </div>
+      </div>    
+    </script>
     <script type='text/template' id='photo-section-template'>
       <div class="row">
         <div class="col">
@@ -74,6 +99,57 @@
       </div>
     </script>
     <script type="text/javascript">
+      var Project = Backbone.Model.extend({
+        defaults: {
+          firstImgUrl: "images/mc-5.png",
+          secondImgUrl: "images/mc-5.png",
+          firstImgOverlayText: "First Overlay Text",
+          secondImgOverlayText: "Second Overlay Text"
+        }
+      });
+      var ProjectView = Backbone.View.extend({
+        template: _.template($("#project-overview-template").html()),
+        tagName: "div",
+        className: "photo-section",
+
+        render: function () {
+          this.$el.html(this.template(this.model.toJSON()));
+          this.checkIfShow();
+          $(document).on("scroll", _.throttle(_.bind(function () {
+            this.checkIfShow();
+          }, this), 600));
+          return this;
+        },
+
+        checkIfShow: function () {
+          if(($(document).scrollTop() + $(window).height()) >= this.$el.position().top){
+            this.$el.addClass("visible");
+          }
+          if(($(document).scrollTop() + $(window).height() / 2) >= this.$el.position().top){
+            this.$(".photo-info").addClass("visible");
+          }
+        }
+      });
+      var projectView = new ProjectView({
+        model: new Project({
+          firstImgUrl: "images/mc.png",
+          secondImgUrl: "images/mc-2.png"
+        })
+      });
+      projectView.$el.appendTo("#main-div");
+      projectView.render();
+
+      var projectView2 = new ProjectView({
+        model: new Project({
+          firstImgUrl: "images/mc-4.png",
+          secondImgUrl: "images/mc-5.png"
+        })
+      });
+      projectView2.$el.appendTo("#main-div");
+      setTimeout(function () {
+        projectView2.render();
+      }, 300);
+
       var PhotoSection = Backbone.Model.extend({
         defaults: {
           title: "Hello Title",
@@ -87,7 +163,7 @@
       var PhotoSectionView = Backbone.View.extend({
         template: _.template($("#photo-section-template").html()),
         tagName: "div",
-        className: "container-fluid photo-section",
+        className: "photo-section",
 
         initialize: function () {
           this.render();
@@ -104,36 +180,12 @@
         render: function () {
           this.$el.html(this.template(this.model.toJSON()));
           return this;
-        },
-
-
+        }
       });
       var photoSectionView = new PhotoSectionView({
         model: photoSectionOne
       });
-      photoSectionView.$el.appendTo("#main-div");
-
-      var photoSectionView = new PhotoSectionView({
-        model: photoSectionOne
-      });
-      photoSectionView.$el.appendTo("#main-div");
-
-      var photoSectionView = new PhotoSectionView({
-        model: photoSectionOne
-      });
-      photoSectionView.$el.appendTo("#main-div");
-
-      var photoSectionView = new PhotoSectionView({
-        model: photoSectionOne
-      });
-      photoSectionView.$el.appendTo("#main-div");
-
-      var photoSectionView = new PhotoSectionView({
-        model: photoSectionOne
-      });
-      photoSectionView.$el.appendTo("#main-div");
-
-      $(document).trigger("scroll");
+      //photoSectionView.$el.appendTo("#main-div");
     </script>
   </body>
 </html>
