@@ -87,7 +87,6 @@
         })
       });
       projectView.$el.appendTo("#main-div");
-      projectView.render();
       var projectView2 = new SH.ProjectPairView({
         model: new SH.ProjectPair({
           firstImgUrl: "images/LC.png",
@@ -97,7 +96,6 @@
         })
       });
       projectView2.$el.appendTo("#main-div");
-      projectView2.render();
       var projectView3 = new SH.ProjectPairView({
         model: new SH.ProjectPair({
           firstImgUrl: "images/mc.png",
@@ -107,7 +105,25 @@
         })
       });
       projectView3.$el.appendTo("#main-div");
-      projectView3.render();
+
+      var allViews = [projectView, projectView2, projectView3];
+      var numToShow = Math.ceil($(window).height() / 450);
+      var viewsToShow = allViews.slice(0, numToShow);
+      var viewsToHide = allViews.slice(numToShow);
+
+      var timeout = 0;
+      _.each(viewsToShow, function (view) {
+        setTimeout(function () {
+          view.render();
+        }, timeout);
+        timeout = timeout + 300;
+      });
+
+      setTimeout(function () {
+        _.each(viewsToHide, function (view) {
+          view.render();
+        });
+      }, timeout);
     </script>
   </body>
 </html>
