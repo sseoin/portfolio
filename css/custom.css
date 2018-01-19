@@ -1,7 +1,7 @@
 footer,
 header {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .photo-section .first-img,
@@ -48,7 +48,7 @@ header {
 }
 
 .card-cell {
-  height: 450px;
+  height: 250px;
   overflow: hidden;
   position: relative;
 }
@@ -71,7 +71,7 @@ header {
 }
 
 .project-body {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .project-body ul {
@@ -88,4 +88,30 @@ header {
 
 body {
   font-family: "zimmer";
+}
+
+@media (min-width: 576px) {
+  .card-cell {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-cell {
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer,
+  header {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .card-cell {
+    height: 450px;
+  }
+  .project-body {
+    margin-top: 60px;
+  }
 }
