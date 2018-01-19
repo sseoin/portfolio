@@ -26,7 +26,7 @@
     browseToPage: function (event) {
       var target = $(event.currentTarget);
       var pageId = target.data("page-id");
-      $("#main-div").load("partials/_" + pageId + ".html");
+      $("#main-div").load("partials/" + pageId + ".html");
     }
   });
 } (jQuery));
