@@ -1,0 +1,98 @@
+<script type="text/template" id="project-pair-template">
+  <div class="row no-gutters">
+    <div class="col">
+      <div class="card-cell first-img">
+        <a href="#" data-page-id="<%= firstPageId %>">
+          <div class="img-overlay">
+            <span class="img-overlay-text">
+              <h2><%= firstImgOverlayText %></h2>
+              <h6><%= firstImgOverlayDescription %></h6>
+            </span>
+          </div>
+          <img class="img-fluid" src="<%= firstImgUrl %>" />
+        </a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-cell second-img">
+        <a href="#" data-page-id="<%= secondPageId %>">
+          <div class="img-overlay">
+            <span class="img-overlay-text">
+              <h2><%= secondImgOverlayText %></h2>
+              <h6><%= secondImgOverlayDescription %></h6>
+            </span>
+          </div>
+          <img class="img-fluid" src="<%= secondImgUrl %>" />
+        </a>
+      </div>
+    </div>
+  </div>
+</script>
+
+<!-- Backbone Models -->
+<script src="js/backbone/models/project_pair.js"></script>
+
+<!-- Backbone Views -->
+<script src="js/backbone/views/project_pair_view.js"></script>
+
+<!-- Work javascript -->
+<script type="text/javascript">
+  var projectView = new SH.ProjectPairView({
+    model: new SH.ProjectPair({
+      firstImgUrl: "images/mc.png",
+      secondImgUrl: "images/Contact-us-ipad.png",
+      firstImgOverlayText: "First Overlay Text",
+      secondImgOverlayText: "Second Overlay Text",
+      firstImgOverlayDescription: "Description",
+      secondImgOverlayDescription: "Description",
+      firstPageId: "project1",
+      secondPageId: "project2"
+    })
+  });
+  projectView.$el.appendTo("#main-div");
+  var projectView2 = new SH.ProjectPairView({
+    model: new SH.ProjectPair({
+      firstImgUrl: "images/LC.png",
+      secondImgUrl: "images/mc-2.png",
+      firstImgOverlayText: "Third Overlay Text",
+      secondImgOverlayText: "Fourth Overlay Text",
+      firstImgOverlayDescription: "Description",
+      secondImgOverlayDescription: "Description",
+      firstPageId: "project3",
+      secondPageId: "project4"
+    })
+  });
+  projectView2.$el.appendTo("#main-div");
+  var projectView3 = new SH.ProjectPairView({
+    model: new SH.ProjectPair({
+      firstImgUrl: "images/mc.png",
+      secondImgUrl: "images/Contact-us-ipad.png",
+      firstImgOverlayText: "Fifth Overlay Text",
+      secondImgOverlayText: "Sixth Overlay Text",
+      firstImgOverlayDescription: "Description",
+      secondImgOverlayDescription: "Description",
+      firstPageId: "project5",
+      secondPageId: "project6"
+    })
+  });
+  projectView3.$el.appendTo("#main-div");
+
+  var allViews = [projectView, projectView2, projectView3];
+  var numToShow = Math.ceil($(window).height() / 450);
+  var viewsToShow = allViews.slice(0, numToShow);
+  var viewsToHide = allViews.slice(numToShow);
+
+  var timeout = 0;
+  _.each(viewsToShow, function (view) {
+    setTimeout(function () {
+      view.render();
+    }, timeout);
+    timeout = timeout + 300;
+  });
+
+  setTimeout(function () {
+    _.each(viewsToHide, function (view) {
+      view.render();
+    });
+  }, timeout);
+</script>

@@ -3,6 +3,9 @@
     template: _.template($("#project-pair-template").html()),
     tagName: "div",
     className: "photo-section",
+    events: {
+      "click a": "browseToPage"
+    },
 
     render: function () {
       this.$el.html(this.template(this.model.toJSON()));
@@ -18,6 +21,12 @@
       if(($(document).scrollTop() + $(window).height()) >= this.$el.position().top){
         this.$el.addClass("visible");
       }
+    },
+
+    browseToPage: function (event) {
+      var target = $(event.currentTarget);
+      var pageId = target.data("page-id");
+      $("#main-div").load("partials/_" + pageId + ".html");
     }
   });
 } (jQuery));

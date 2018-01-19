@@ -20,9 +20,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Work <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Life</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+            <a class="nav-item nav-link active" href="#" data-page="work">Work</a>
+            <a class="nav-item nav-link" href="#" data-page="life">Life</a>
           </div>
         </div>
       </nav>
@@ -41,45 +40,11 @@
     <script src="js/underscore/underscore-min.js"></script>
     <script src="js/backbone/dist/backbone-min.js"></script>
 
-    <!-- Templates -->
-    <script type="text/template" id="project-pair-template">
-      <div class="row no-gutters">
-        <div class="col">
-          <div class="card-cell first-img">
-            <div class="img-overlay">
-              <span class="img-overlay-text">
-                <h2><%= firstImgOverlayText %></h2>
-                <h6><%= firstImgOverlayDescription %></h6>
-              </span>
-            </div>
-            <img class="img-fluid" src="<%= firstImgUrl %>" />
-          </div>
-        </div>
-        <div class="col">
-          <div class="card-cell second-img">
-            <div class="img-overlay">
-              <span class="img-overlay-text">
-                <h2><%= secondImgOverlayText %></h2>
-                <h6><%= secondImgOverlayDescription %></h6>
-              </span>
-            </div>
-            <img class="img-fluid" src="<%= secondImgUrl %>" />
-          </div>
-        </div>
-      </div>
-    </script>
-
     <script type="text/javascript">
       window.SH = window.SH || { };
     </script>
 
-    <!-- Backbone Models -->
-    <script src="js/backbone/models/project_pair.js"></script>
-
-    <!-- Backbone Views -->
-    <script src="js/backbone/views/project_pair_view.js"></script>
-
-    <!-- Main custom javascript -->
+    <!-- Main javascript -->
     <script src="js/main.js"></script>
   </body>
 </html>

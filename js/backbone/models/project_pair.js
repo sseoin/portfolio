@@ -6,7 +6,9 @@
       firstImgOverlayText: "",
       secondImgOverlayDescription: "",
       firstImgOverlayText: "",
-      secondImgOverlayDescription: ""
+      secondImgOverlayDescription: "",
+      firstPageId: "",
+      secondPageId: ""
     }
   });
 } (jQuery));
