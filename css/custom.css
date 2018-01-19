@@ -1,3 +1,4 @@
+footer,
 header {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -18,12 +19,13 @@ header {
   transition-delay: 200ms;
 }
 
-.photo-section.visible .first-img {
+.photo-section.visible .first-img,
+.photo-section.visible .second-img {
   opacity: 1;
   transform: translateY(0px);
 }
 
-.photo-section.visible .second-img {
+.card-cell:hover .img-overlay-text {
   opacity: 1;
   transform: translateY(0px);
 }
@@ -47,32 +49,33 @@ header {
 .card-cell {
   height: 450px;
   overflow: hidden;
-  text-align: center;
   position: relative;
 }
 
-.card-cell .img-overlay {
+.img-overlay {
   background-color: black;
   opacity: 0;
   transition: opacity 300ms ease-in;
-  display: block;
+  display: table;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 10;
   color: white;
-  font-size: 25px;
+  padding: 0 60px;
 }
 
 .img-overlay-text {
+  display: table-cell;
+  vertical-align: middle;
   position: relative;
-  top: 45%;
-  transform: translateY(-50%);
+  opacity: 0;
+  transition: transform 300ms ease-out;
+  transform: translateY(30px);
 }
 
 .card-cell img {
   transition: transform 300ms ease-in;
-  z-index: 9;
 }
 
 .card-cell:hover .img-overlay {
@@ -80,9 +83,5 @@ header {
 }
 
 .card-cell:hover img {
-  transform: scale(1.1);
-}
-
-footer {
-  margin-top: 30px;
+  transform: scale(1.05);
 }

@@ -4,7 +4,9 @@
       firstImgUrl: "",
       secondImgUrl: "",
       firstImgOverlayText: "",
-      secondImgOverlayText: ""
+      secondImgOverlayDescription: "",
+      firstImgOverlayText: "",
+      secondImgOverlayDescription: ""
     }
   });
 } (jQuery));
