@@ -86,6 +86,8 @@
           secondImgOverlayText: "Second Overlay Text"
         })
       });
+      projectView.$el.appendTo("#main-div");
+      projectView.render();
       var projectView2 = new SH.ProjectPairView({
         model: new SH.ProjectPair({
           firstImgUrl: "images/LC.png",
@@ -94,14 +96,18 @@
           secondImgOverlayText: "Fourth Overlay Text"
         })
       });
-
-      projectView.$el.appendTo("#main-div");
       projectView2.$el.appendTo("#main-div");
-
-      projectView.render();
-      setTimeout(function () {
-        projectView2.render();
-      }, 300);
+      projectView2.render();
+      var projectView3 = new SH.ProjectPairView({
+        model: new SH.ProjectPair({
+          firstImgUrl: "images/mc.png",
+          secondImgUrl: "images/Contact-us-ipad.png",
+          firstImgOverlayText: "Fifth Overlay Text",
+          secondImgOverlayText: "Sixth Overlay Text"
+        })
+      });
+      projectView3.$el.appendTo("#main-div");
+      projectView3.render();
     </script>
   </body>
 </html>

@@ -6,19 +6,17 @@
 
     render: function () {
       this.$el.html(this.template(this.model.toJSON()));
-      this.checkIfShow();
       $(document).on("scroll", _.throttle(_.bind(function () {
         this.checkIfShow();
-      }, this), 600));
+      }, this), 300));
+      this.checkIfShow();
       return this;
     },
 
     checkIfShow: function () {
+      console.log($(document).scrollTop() + $(window).height() + ":" + this.$el.position().top);
       if(($(document).scrollTop() + $(window).height()) >= this.$el.position().top){
         this.$el.addClass("visible");
-      }
-      if(($(document).scrollTop() + $(window).height() / 2) >= this.$el.position().top){
-        this.$(".photo-info").addClass("visible");
       }
     }
   });
