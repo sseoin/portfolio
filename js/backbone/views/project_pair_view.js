@@ -17,7 +17,6 @@
     },
 
     checkIfShow: function () {
-      console.log($(document).scrollTop() + $(window).height() + ":" + this.$el.position().top);
       if(($(document).scrollTop() + $(window).height()) >= this.$el.position().top){
         this.$el.addClass("visible");
       }
