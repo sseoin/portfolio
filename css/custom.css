@@ -69,3 +69,12 @@ header {
 .card-cell:hover img {
   transform: scale(1.05);
 }
+
+.project-body {
+  margin-top: 60px;
+}
+
+.project-body ul {
+  padding: 0;
+  padding-left: 16px;
+}
