@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
 
     <title>Sarah Han</title>
@@ -36,12 +36,13 @@
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/underscore/underscore-min.js"></script>
-    <script src="node_modules/backbone/backbone-min.js"></script>
-    <script src="js/core.js"></script>
-    <script type='text/template' id='project-overview-template'>
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/underscore/underscore-min.js"></script>
+    <script src="js/backbone/dist/backbone-min.js"></script>
+
+    <!-- Templates -->
+    <script type="text/template" id="project-pair-template">
       <div class="row no-gutters">
         <div class="col">
           <div class="card-cell first-img">
@@ -63,129 +64,44 @@
             <img class="img-fluid" src="<%= secondImgUrl %>" />
           </div>
         </div>
-      </div>    
-    </script>
-    <script type='text/template' id='photo-section-template'>
-      <div class="row">
-        <div class="col">
-          <div class="card-cell">
-            <span class="photo-info">
-              <%= title %>
-            </span>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card-cell">
-            <div class="img-overlay">
-              <span><%= firstImgOverlayText %></span>
-            </div>
-            <img class="img-fluid" src="<%= firstImgUrl %>" />
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="card-cell">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card-cell">
-            <div class="img-overlay">
-              <span><%= secondImgOverlayText %></span>
-            </div>
-            <img class="img-fluid" src="<%= secondImgUrl %>" />
-          </div>
-        </div>
       </div>
     </script>
+
     <script type="text/javascript">
-      var Project = Backbone.Model.extend({
-        defaults: {
-          firstImgUrl: "images/mc-5.png",
-          secondImgUrl: "images/mc-5.png",
+      window.SH = window.SH || { };
+    </script>
+
+    <!-- Backbone Models -->
+    <script src="js/backbone/models/project_pair.js"></script>
+
+    <!-- Backbone Views -->
+    <script src="js/backbone/views/project_pair_view.js"></script>
+
+    <script type="text/javascript">
+      var projectView = new SH.ProjectPairView({
+        model: new SH.ProjectPair({
+          firstImgUrl: "images/mc.png",
+          secondImgUrl: "images/Contact-us-ipad.png",
           firstImgOverlayText: "First Overlay Text",
           secondImgOverlayText: "Second Overlay Text"
-        }
-      });
-      var ProjectView = Backbone.View.extend({
-        template: _.template($("#project-overview-template").html()),
-        tagName: "div",
-        className: "photo-section",
-
-        render: function () {
-          this.$el.html(this.template(this.model.toJSON()));
-          this.checkIfShow();
-          $(document).on("scroll", _.throttle(_.bind(function () {
-            this.checkIfShow();
-          }, this), 600));
-          return this;
-        },
-
-        checkIfShow: function () {
-          if(($(document).scrollTop() + $(window).height()) >= this.$el.position().top){
-            this.$el.addClass("visible");
-          }
-          if(($(document).scrollTop() + $(window).height() / 2) >= this.$el.position().top){
-            this.$(".photo-info").addClass("visible");
-          }
-        }
-      });
-      var projectView = new ProjectView({
-        model: new Project({
-          firstImgUrl: "images/mc.png",
-          secondImgUrl: "images/Contact-us-ipad.png"
         })
       });
-      projectView.$el.appendTo("#main-div");
-      projectView.render();
-
-      var projectView2 = new ProjectView({
-        model: new Project({
+      var projectView2 = new SH.ProjectPairView({
+        model: new SH.ProjectPair({
           firstImgUrl: "images/LC.png",
-          secondImgUrl: "images/mc-2.png"
+          secondImgUrl: "images/mc-2.png",
+          firstImgOverlayText: "Third Overlay Text",
+          secondImgOverlayText: "Fourth Overlay Text"
         })
       });
+
+      projectView.$el.appendTo("#main-div");
       projectView2.$el.appendTo("#main-div");
+
+      projectView.render();
       setTimeout(function () {
         projectView2.render();
       }, 300);
-
-      var PhotoSection = Backbone.Model.extend({
-        defaults: {
-          title: "Hello Title",
-          firstImgUrl: "https://images3.alphacoders.com/823/82317.jpg",
-          secondImgUrl: "https://www.hdwallpapers.in/walls/autumn_bench-HD.jpg",
-          firstImgOverlayText: "First Overlay Text",
-          secondImgOverlayText: "Second Overlay Text"
-        }
-      });
-      var photoSectionOne = new PhotoSection();
-      var PhotoSectionView = Backbone.View.extend({
-        template: _.template($("#photo-section-template").html()),
-        tagName: "div",
-        className: "photo-section",
-
-        initialize: function () {
-          this.render();
-          $(document).on("scroll", _.throttle(_.bind(function () {
-            if(($(document).scrollTop() + $(window).height()) >= this.$el.position().top){
-              this.$el.addClass("visible");
-            }
-            if(($(document).scrollTop() + $(window).height() / 2) >= this.$el.position().top){
-              this.$(".photo-info").addClass("visible");
-            }
-          }, this), 600));
-        },
-
-        render: function () {
-          this.$el.html(this.template(this.model.toJSON()));
-          return this;
-        }
-      });
-      var photoSectionView = new PhotoSectionView({
-        model: photoSectionOne
-      });
-      //photoSectionView.$el.appendTo("#main-div");
     </script>
   </body>
 </html>
