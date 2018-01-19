@@ -78,3 +78,14 @@ header {
   padding: 0;
   padding-left: 16px;
 }
+
+@font-face {
+  font-family: "zimmer";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/zimmer.woff") format("woff");
+}
+
+body {
+  font-family: "zimmer";
+}
