@@ -29,6 +29,11 @@ header {
   animation: 100ms ease-out 0s 1 slideInFromLeft;
 }
 
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .photo-section .first-img,
 .photo-section .second-img {
   opacity: 0;
