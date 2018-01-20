@@ -115,7 +115,7 @@ body {
   .card-cell {
     height: 350px;
   }
-  
+
   .nav-item {
     position: relative;
   }
@@ -127,14 +127,14 @@ body {
     height: 1px;
     bottom: 5px;
     left: 0;
-    background-color: black;
+    background-color: rgba(0,0,0,.9);
     transform: scaleX(0);
     transition: transform 100ms linear;
   }
 
   .nav-item.active:before,
   .nav-item:hover:before {
-    transform: scaleX(0.7);
+    transform: scaleX(0.5);
   }
 
   .nav-item:hover before {
