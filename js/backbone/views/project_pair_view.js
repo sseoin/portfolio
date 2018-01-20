@@ -9,7 +9,7 @@
 
     render: function () {
       this.$el.html(this.template(this.model.toJSON()));
-      $(document).on("scroll", _.throttle(_.bind(function () {
+      $(document).on("scroll." + this.cid, _.throttle(_.bind(function () {
         this.checkIfShow();
       }, this), 300));
       this.checkIfShow();
@@ -18,6 +18,7 @@
 
     checkIfShow: function () {
       if(($(document).scrollTop() + $(window).height()) >= this.$el.position().top){
+        $(document).off("scroll." + this.cid);
         this.$el.addClass("visible");
       }
     },
@@ -26,6 +27,11 @@
       var target = $(event.currentTarget);
       var pageId = target.data("page-id");
       $("#main-div").load("partials/" + pageId + ".html");
+    },
+
+    remove: function () {
+      $(document).off("scroll." + this.cid);
+      return Backbone.View.prototype.remove.call(this);
     }
   });
 } (jQuery));
