@@ -78,11 +78,6 @@ header {
   margin-left: -2px;
 }
 
-.project-header h1,
-.project-header h5 {
-  margin-bottom: 0px;
-}
-
 .project-header {
   animation: 900ms ease-out 0s 1 slideInFromBottom;
 }
