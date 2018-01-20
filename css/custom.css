@@ -71,11 +71,24 @@ header {
 }
 
 .project-header {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .project-header h1 {
-  font-size: 60px;
+  margin-left: -2px;
+}
+
+.project-header h1,
+.project-header h5 {
+  margin-bottom: 0px;
+}
+
+.project-header {
+  animation: 900ms ease-out 0s 1 slideInFromBottom;
+}
+
+.project-image {
+  animation: 1200ms ease-out 0s 1 slideInFromBottom;
 }
 
 .project-body {
@@ -121,5 +134,27 @@ body {
   }
   .project-body {
     margin-top: 60px;
+  }
+  .project-header h1 {
+    font-size: 60px;
+  }
+  .project-header {
+    margin-bottom: 60px;
+  }
+  .img-overlay-text h4 {
+    font-size: 32px;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
   }
 }
