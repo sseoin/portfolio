@@ -4,6 +4,30 @@ header {
   padding-bottom: 30px;
 }
 
+.nav-item {
+  position: relative;
+}
+
+.nav-item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 5px;
+  left: 0;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 100ms linear;
+}
+
+.nav-item:hover:before {
+  transform: scaleX(0.7);
+}
+
+.nav-item:hover before {
+  animation: 100ms ease-out 0s 1 slideInFromLeft;
+}
+
 .photo-section .first-img,
 .photo-section .second-img {
   opacity: 0;
