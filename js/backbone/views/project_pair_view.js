@@ -26,7 +26,11 @@
     browseToPage: function (event) {
       var target = $(event.currentTarget);
       var pageId = target.data("page-id");
-      $("#main-div").load("partials/" + pageId + ".html");
+      $("#main-div").fadeOut(function () {
+        $("#main-div").empty();
+        $("#main-div").show();
+        $("#main-div").load("partials/" + pageId + ".html");
+      });
     },
 
     remove: function () {
