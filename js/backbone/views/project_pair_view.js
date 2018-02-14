@@ -24,13 +24,11 @@
     },
 
     browseToPage: function (event) {
+      event.stopPropagation();
+      event.preventDefault();
       var target = $(event.currentTarget);
       var pageId = target.data("page-id");
-      $("#main-div").fadeOut(function () {
-        $("#main-div").empty();
-        $("#main-div").show();
-        $("#main-div").load("partials/" + pageId + ".html");
-      });
+      SH.browseTo(pageId);
     },
 
     remove: function () {
