@@ -39,10 +39,10 @@
 <script type="text/javascript">
   var projectView = new SH.ProjectPairView({
     model: new SH.ProjectPair({
-      firstImgUrl: "images/mc.png",
-      secondImgUrl: "images/Contact-us-ipad.png",
-      firstImgOverlayText: "First Overlay Text",
-      secondImgOverlayText: "Second Overlay Text",
+      firstImgUrl: "images/jam_mobile/jam-thumb.png",
+      secondImgUrl: "images/lc/lc-thumb.png",
+      firstImgOverlayText: "Jam Mobile",
+      secondImgOverlayText: "LC",
       firstImgOverlayDescription: "Description",
       secondImgOverlayDescription: "Description",
       firstPageId: "project1",
@@ -52,10 +52,10 @@
   projectView.$el.appendTo("#main-div");
   var projectView2 = new SH.ProjectPairView({
     model: new SH.ProjectPair({
-      firstImgUrl: "images/LC.png",
-      secondImgUrl: "images/mc-2.png",
-      firstImgOverlayText: "Third Overlay Text",
-      secondImgOverlayText: "Fourth Overlay Text",
+      firstImgUrl: "images/lumira/lumira-thumb.png",
+      secondImgUrl: "images/self_check_in/m-s1-1.png",
+      firstImgOverlayText: "Lumira",
+      secondImgOverlayText: "Self Check-In",
       firstImgOverlayDescription: "Description",
       secondImgOverlayDescription: "Description",
       firstPageId: "project3",
@@ -63,21 +63,8 @@
     })
   });
   projectView2.$el.appendTo("#main-div");
-  var projectView3 = new SH.ProjectPairView({
-    model: new SH.ProjectPair({
-      firstImgUrl: "images/mc.png",
-      secondImgUrl: "images/Contact-us-ipad.png",
-      firstImgOverlayText: "Fifth Overlay Text",
-      secondImgOverlayText: "Sixth Overlay Text",
-      firstImgOverlayDescription: "Description",
-      secondImgOverlayDescription: "Description",
-      firstPageId: "project5",
-      secondPageId: "project6"
-    })
-  });
-  projectView3.$el.appendTo("#main-div");
 
-  var allViews = [projectView, projectView2, projectView3];
+  var allViews = [projectView, projectView2];
   var numToShow = Math.ceil($(window).height() / 450);
   var viewsToShow = allViews.slice(0, numToShow);
   var viewsToHide = allViews.slice(numToShow);
