@@ -11,7 +11,7 @@ header {
 .photo-section .first-img,
 .photo-section .second-img {
   opacity: 0;
-  transition: transform 600ms ease-out, opacity 1000ms ease-out;
+  transition: transform 400ms ease-out, opacity 800ms ease-out;
   transform: translateY(100px);
 }
 
