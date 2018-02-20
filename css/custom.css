@@ -185,7 +185,10 @@ body {
 
 @keyframes slideInFromBottom {
   0% {
+    opacity: 0;
     transform: translateY(150px);
+  }
+  10% {
     opacity: 0;
   }
   50% {
