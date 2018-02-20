@@ -80,6 +80,14 @@ header {
 
 .project-header h1 {
   margin-left: -2px;
+  letter-spacing: -0.5px;
+}
+
+.project-subheader {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  margin-bottom: 30px;
 }
 
 .project-body {
@@ -92,15 +100,18 @@ header {
   padding-left: 16px;
 }
 
-@font-face {
-  font-family: "zimmer";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/zimmer.woff") format("woff");
+.project-large-paragraph {
+  font-size: 26px;
+  line-height: 1.35;
+  margin-bottom: 30px;
+}
+
+.project-paragraph {
+  font-size: 20px;
 }
 
 body {
-  font-family: "zimmer";
+  font-family: 'Barlow', sans-serif;
 }
 
 @media (min-width: 576px) {
@@ -161,7 +172,7 @@ body {
     margin-bottom: 60px;
   }
   .project-header h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
   .project-header {
     margin-bottom: 60px;
