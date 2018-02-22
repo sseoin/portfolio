@@ -3,6 +3,10 @@ header {
   padding-bottom: 30px;
 }
 
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
@@ -52,7 +56,6 @@ header {
 }
 
 .card-cell {
-  height: 250px;
   overflow: hidden;
   position: relative;
 }
@@ -120,74 +123,68 @@ header {
   font-weight: 300;
 }
 
-
-body {
-  font-family: 'Barlow', sans-serif;
+.nav-item {
+  position: relative;
 }
 
-@media (min-width: 576px) {
-  .card-cell {
-    height: 350px;
-  }
-
-  .nav-item {
-    position: relative;
-  }
-
-  .nav-item:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 5px;
-    left: 0;
-    background-color: rgba(0,0,0,.9);
-    transform: scaleX(0);
-    transition: transform 100ms linear;
-  }
-
-  .nav-item.active:before,
-  .nav-item:hover:before {
-    transform: scaleX(0.5);
-  }
-
-  .nav-item:hover before {
-    animation: 100ms ease-out 0s 1 slideInFromLeft;
-  }
-
-  .project-header {
-    animation: 900ms ease-out 0s 1 slideInFromBottom;
-  }
-
-  .project-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: 1200ms ease-out 0s 1 slideInFromBottom;
-  }
-
-  .img-container {
-    padding-bottom: 56.25%;
-    position: relative;
-    width: 100%;
-  }
+.nav-item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 5px;
+  left: 0;
+  background-color: rgba(0,0,0,.9);
+  transform: scaleX(0);
+  transition: transform 100ms linear;
 }
 
-@media (min-width: 768px) {
-  .card-cell {
-    height: 400px;
-  }
+.nav-item.active:before,
+.nav-item:hover:before {
+  transform: scaleX(0.5);
+}
+
+.nav-item:hover before {
+  animation: 100ms ease-out 0s 1 slideInFromLeft;
+}
+
+.project-header {
+  animation: 900ms ease-out 0s 1 slideInFromBottom;
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: 1200ms ease-out 0s 1 slideInFromBottom;
+}
+
+.img-container {
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.index-img-container {
+  padding-bottom: 70.83%;
+  position: relative;
+  width: 100%;
+}
+
+.index-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
   header {
     padding-top: 70px;
     padding-bottom: 70px;
-  }
-  .card-cell {
-    height: 420px;
   }
   .project-body {
     margin-top: 60px;
