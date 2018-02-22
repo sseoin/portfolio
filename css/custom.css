@@ -148,10 +148,6 @@ body {
   animation: 100ms ease-out 0s 1 slideInFromLeft;
 }
 
-.project-header {
-  animation: 900ms ease-out 0s 1 slideInFromBottom;
-}
-
 .project-image {
   position: absolute;
   top: 0;
