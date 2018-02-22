@@ -5,6 +5,7 @@ header {
 
 body {
   font-family: 'Barlow', sans-serif;
+  overflow-y: scroll;
 }
 
 .navbar-brand {
