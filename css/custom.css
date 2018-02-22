@@ -8,24 +8,13 @@ body {
   overflow-y: scroll;
 }
 
+h4 {
+  margin: 0;
+}
+
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
-}
-
-.photo-section .first-img,
-.photo-section .second-img {
-  opacity: 0;
-  transition: transform 400ms ease-out, opacity 800ms ease-out;
-  transform: translateY(100px);
-}
-
-.photo-section .first-img {
-  transition-delay: 100ms;
-}
-
-.photo-section .second-img {
-  transition-delay: 200ms;
 }
 
 .photo-section.visible .first-img,
@@ -36,46 +25,30 @@ body {
 
 .img-overlay {
   background-color: black;
-  opacity: 0;
+  opacity: 0.7;
   transition: opacity 300ms ease-out;
-  width: 100%;
-  height: 100%;
   position: absolute;
   z-index: 10;
   color: white;
-  padding: 0 60px;
+  padding: 10px 20px 12px 20px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  bottom: 0;
 }
 
 .img-overlay-text {
   position: relative;
-  opacity: 0;
-  transition: transform 300ms ease-out;
-  transform: translateY(30px);
+  opacity: 1;
+}
+
+.index-project-description {
+  display: none;
 }
 
 .card-cell {
   overflow: hidden;
   position: relative;
   margin-top: -1px;
-}
-
-.card-cell:hover .img-overlay {
-  opacity: 0.7;
-}
-
-.card-cell:hover .img-overlay-text {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.card-cell img {
-  transition: transform 300ms ease-out;
-}
-
-.card-cell:hover img {
-  transform: scale(1.05);
 }
 
 .project-header {
@@ -179,6 +152,58 @@ body {
 @media (min-width: 768px) {
   .slide-in {
     animation: 1200ms ease-out 0s 1 slideInFromBottom;
+  }
+  .photo-section .first-img,
+  .photo-section .second-img {
+    opacity: 0;
+    transition: transform 400ms ease-out, opacity 800ms ease-out;
+    transform: translateY(100px);
+  }
+
+  .photo-section .first-img {
+    transition-delay: 100ms;
+  }
+
+  .photo-section .second-img {
+    transition-delay: 200ms;
+  }
+
+  .img-overlay-text,
+  .img-overlay {
+    opacity: 0;
+  }
+
+  .img-overlay {
+    padding: 0 60px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .img-overlay-text {
+    transition: transform 300ms ease-out;
+    transform: translateY(30px);
+  }
+
+  .index-project-description {
+    display: block;
+  }
+
+  .card-cell:hover .img-overlay {
+    opacity: 0.7;
+  }
+
+  .card-cell:hover .img-overlay-text {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  .card-cell img {
+    transition: transform 300ms ease-out;
+  }
+
+  .card-cell:hover img {
+    transform: scale(1.05);
   }
 }
 
