@@ -58,6 +58,7 @@ body {
 .card-cell {
   overflow: hidden;
   position: relative;
+  margin-top: -1px;
 }
 
 .card-cell:hover .img-overlay {
