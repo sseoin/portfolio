@@ -110,6 +110,7 @@ header {
 .project-paragraph {
   font-size: 20px;
   margin-bottom: 40px;
+  font-weight:300;
 }
 
 body {
@@ -175,6 +176,7 @@ body {
   }
   .project-header h1 {
     font-size: 50px;
+    font-weight:300;
   }
   .project-header {
     margin-bottom: 60px;
