@@ -78,11 +78,6 @@ header {
   margin-bottom: 30px;
 }
 
-.project-header h1 {
-  margin-left: -2px;
-  letter-spacing: -0.5px;
-}
-
 .project-subheader {
   font-size: 14px;
   font-weight: 700;
@@ -103,6 +98,8 @@ header {
 .project-title {
   font-size:50px;
   font-weight:300;
+  margin-left: -2px;
+  letter-spacing: -0.5px;
 }
 
 .project-description {
@@ -186,7 +183,7 @@ body {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-  .project-header h1 {
+  .project-title {
     font-size: 50px;
     font-weight:300;
   }
