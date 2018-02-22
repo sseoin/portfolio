@@ -90,8 +90,8 @@ body {
 }
 
 .project-body {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 70px;
 }
 
 .project-body ul {
@@ -120,7 +120,6 @@ body {
 
 .project-paragraph {
   font-size: 20px;
-  margin-bottom: 40px;
   font-weight: 300;
 }
 
@@ -161,10 +160,6 @@ body {
   height: 100%;
 }
 
-.slide-in {
-  animation: 1200ms ease-out 0s 1 slideInFromBottom;
-}
-
 .img-container {
   padding-bottom: 56.25%;
   position: relative;
@@ -185,14 +180,16 @@ body {
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .slide-in {
+    animation: 1200ms ease-out 0s 1 slideInFromBottom;
+  }
+}
+
 @media (min-width: 992px) {
   header {
     padding-top: 70px;
     padding-bottom: 70px;
-  }
-  .project-body {
-    margin-top: 60px;
-    margin-bottom: 60px;
   }
   .project-header {
     margin-bottom: 60px;
