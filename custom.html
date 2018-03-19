@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Sarah Han</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light container">
+        <a class="navbar-brand" href="/index.html">S / H</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#" data-page="work">Work</a>
+            <a class="nav-item nav-link" href="#" data-page="life">Life</a>
+          </div>
+        </div>
+      </nav>
+    </header> 
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/underscore/underscore-min.js"></script>
+    <script src="js/backbone/dist/backbone-min.js"></script>
+
+    <script type="text/javascript">
+      window.SH = window.SH || { };
+    </script>
+
+    <!-- Main javascript -->
+    <script src="js/main.js"></script>
+
+    <main>
+      <div id="main-div">
+        <div class="slide-in">
+          <div class="container project-header">
+            <div class="row">
+              <div class="col">
+                <h1 class="project-title">Custom Homepage</h1>
+                <h4 class="project-description">Customized home pages for modern intranet. </h4>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col">
+              <div class="img-container">
+                <img class="img-fluid project-image" src="/images/jam_custom/custom-s1-1.png" />
+              </div>
+            </div>
+          </div>
+          <div class="container project-body">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+                <div class="project-subheader">INSIGHT</div>
+                <div class="project-large-paragraph">Companies wanted a more prominent way of communicating company news and information. To support “enterprise wide collaboration” there is a growing interest for customer to control the company home page.</div>
+                <div class="project-paragraph">SAP Jam aims to provide an enterprise collaboration solution that’s rooted in adding business value while removing complexity, by  bringing the right content, people and information together. It also helps IT leverage the solution as an intranet supplement or replacement. </div>
+              </div>
+            </div>
+          </div>
+          <div id="project-slideshow" class="row no-gutters carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#project-slideshow" data-slide-to="0" class="active"></li>
+              <li data-target="#project-slideshow" data-slide-to="1"></li>
+              <li data-target="#project-slideshow" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="img-container">
+                  <img class="img-fluid project-image" src="/images/jam_custom/custom-s2-1.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img class="img-fluid project-image" src="/images/jam_custom/custom-s2-2.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img class="img-fluid project-image" src="/images/jam_custom/custom-s2-3.png" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="img-container">
+                  <img class="img-fluid project-image" src="/images/jam_custom/custom-s2-4.png" />
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#project-slideshow" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#project-slideshow" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="container project-body">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+                <div class="project-subheader">SOLUTION</div>
+                <div class="project-large-paragraph">TAs a lead UX designer, I designed end-to-end solution for IT administrators to create customized home pages. Branded communities allow for stronger relationships with better communication, which ultimately helps drive better customer interactions.</div>
+                <div class="project-paragraph">This solution consists of branding, customizing homepage, translation. We conducted interviews with over 10 customers to gain insights, and took multi-release approach to gather end-user data and feedback. I hosted 5-day design week with a product manager and engineers to answer some of the critical business questions. </div>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col">
+              <div class="img-container">
+                <img class="img-fluid project-image" src="/images/jam_custom/customs-s3-1.gif" />
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#project-slideshow").carousel({
+                pause: false,
+                interval: 3000,
+                ride: "carousel"
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
