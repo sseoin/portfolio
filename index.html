@@ -53,7 +53,7 @@
           <div class="row no-gutters">
             <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <div class="card-cell first-img">
-                <a href="/jam_mobile.html" data-page-id="<%= firstPageId %>">
+                <a data-page-id="<%= firstPageId %>">
                   <div class="index-img-container">
                     <div class="img-overlay">
                       <span class="img-overlay-text">
@@ -68,7 +68,7 @@
             </div>
             <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <div class="card-cell second-img">
-                <a href="/lucky_country.html" data-page-id="<%= secondPageId %>">
+                <a data-page-id="<%= secondPageId %>">
                   <div class="index-img-container">
                     <div class="img-overlay">
                       <span class="img-overlay-text">
@@ -104,13 +104,13 @@
           projectView.$el.appendTo("#main-div");
           var projectView2 = new SH.ProjectPairView({
             model: new SH.ProjectPair({
-              firstImgUrl: "images/lumira/lumira-thumb.png",
+              firstImgUrl: "images/jam_dashboard/dashboard-thumb.png",
               secondImgUrl: "images/self_check_in/m-thumb.png",
-              firstImgOverlayText: "SAP Lumira",
+              firstImgOverlayText: "Dashboard",
               secondImgOverlayText: "Self Check-In",
-              firstImgOverlayDescription: "UI, Branding",
+              firstImgOverlayDescription: "UX, UI",
               secondImgOverlayDescription: "UX, UI",
-              firstPageId: "lumira",
+              firstPageId: "jam_dashboard",
               secondPageId: "self_check_in"
             })
           });
@@ -118,13 +118,13 @@
           var projectView3 = new SH.ProjectPairView({
             model: new SH.ProjectPair({
               firstImgUrl: "images/jam_custom/custom-thumb.png",
-              secondImgUrl: "images/jam_dashboard/dashboard-thumb.png",
+              secondImgUrl: "images/lumira/lumira-thumb.png",
               firstImgOverlayText: "Custom Home Page",
-              secondImgOverlayText: "Dashboard",
-              firstImgOverlayDescription: "UX, UI",
+              secondImgOverlayText: "SAP Lumira",
+              firstImgOverlayDescription: "UI, Branding",
               secondImgOverlayDescription: "UX, UI",
               firstPageId: "custom",
-              secondPageId: "jam_dashboard"
+              secondPageId: "lumira"
             })
           });
           projectView3.$el.appendTo("#main-div");
