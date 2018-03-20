@@ -3,6 +3,11 @@ $(document).ready(function () {
     e.preventDefault();
     SH.browseTo("index");
   });
+  $(".nav-item").on("click", function (e) {
+    e.preventDefault();
+    var target = $(e.currentTarget);
+    SH.browseTo(target.data("page"));
+  });
 });
 
 window.addEventListener('popstate', function(e) {
