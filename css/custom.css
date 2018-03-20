@@ -21,6 +21,10 @@ h4 {
   overflow: hidden;
 }
 
+.nav-item.active {
+  font-weight: 600;
+}
+
 .photo-section.visible .first-img,
 .photo-section.visible .second-img {
   opacity: 1;
