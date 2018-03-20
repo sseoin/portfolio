@@ -159,6 +159,12 @@ h4 {
   width: 100%;
 }
 
+.square-img-container {
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+}
+
 .index-img {
   position: absolute;
   top: 0;
