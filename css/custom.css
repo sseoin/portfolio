@@ -147,6 +147,12 @@ h4 {
   width: 100%;
 }
 
+.seattle-img-container {
+  padding-bottom: 125%;
+  position: relative;
+  width: 100%;
+}
+
 .index-img {
   position: absolute;
   top: 0;
