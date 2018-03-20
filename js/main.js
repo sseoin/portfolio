@@ -26,6 +26,12 @@ SH.browseTo = function (pageId) {
     $("#main-div").empty().show();
     $.get(pageHtml, function (response) {
       var fragment = $(response).find("#main-div").html();
+      var activeNav = $(response).find(".nav-item.active");
+      if (activeNav) {
+        var activePage = activeNav.data("page");
+        $(".nav-item").removeClass("active");
+        $(".nav-item[data-page='" + activePage + "']").addClass("active");
+      }
       $("#main-div").html(fragment);
     });
   });
