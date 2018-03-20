@@ -115,8 +115,21 @@
             })
           });
           projectView2.$el.appendTo("#main-div");
+          var projectView3 = new SH.ProjectPairView({
+            model: new SH.ProjectPair({
+              firstImgUrl: "images/jam_custom/custom-thumb.png",
+              secondImgUrl: "images/jam_dashboard/dashboard-thumb.png",
+              firstImgOverlayText: "Custom Home Page",
+              secondImgOverlayText: "Dashboard",
+              firstImgOverlayDescription: "UX, UI",
+              secondImgOverlayDescription: "UX, UI",
+              firstPageId: "custom",
+              secondPageId: "jam_dashboard"
+            })
+          });
+          projectView3.$el.appendTo("#main-div");
 
-          var allViews = [projectView, projectView2];
+          var allViews = [projectView, projectView2, projectView3];
           var numToShow = Math.ceil($(window).height() / 420);
           var viewsToShow = allViews.slice(0, numToShow);
           var viewsToHide = allViews.slice(numToShow);
