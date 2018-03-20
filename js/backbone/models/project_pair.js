@@ -4,8 +4,8 @@
       firstImgUrl: "",
       secondImgUrl: "",
       firstImgOverlayText: "",
-      secondImgOverlayDescription: "",
-      firstImgOverlayText: "",
+      secondImgOverlayText: "",
+      firstImgOverlayDescription: "",
       secondImgOverlayDescription: "",
       firstPageId: "",
       secondPageId: ""

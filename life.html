@@ -23,8 +23,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/index.html" data-page="work">Work</a>
-            <a class="nav-item nav-link" href="/life.html" data-page="life">Life</a>
+            <a class="nav-item nav-link" href="/index.html" data-page="work">Work</a>
+            <a class="nav-item nav-link active" href="/life.html" data-page="life">Life</a>
           </div>
         </div>
       </nav>
@@ -89,47 +89,30 @@
 
         <!-- Work javascript -->
         <script type="text/javascript">
-          var projectView = new SH.ProjectPairView({
+          var lifeView = new SH.ProjectPairView({
             model: new SH.ProjectPair({
-              firstImgUrl: "images/jam_mobile/jam-thumb.png",
-              secondImgUrl: "images/lc/lc-thumb.png",
-              firstImgOverlayText: "SAP Jam Mobile",
-              secondImgOverlayText: "Lucky Country",
-              firstImgOverlayDescription: "UI, Branding",
-              secondImgOverlayDescription: "UX, UI",
-              firstPageId: "jam_mobile",
-              secondPageId: "lucky_country"
+              firstImgUrl: "images/blockprints/bp-thumb.png",
+              secondImgUrl: "images/hangeul/hangeul-thumb.png",
+              firstImgOverlayText: "Blockprints",
+              secondImgOverlayText: "Hangeul",
+              firstPageId: "blockprints",
+              secondPageId: "hangeul"
             })
           });
-          projectView.$el.appendTo("#main-div");
-          var projectView2 = new SH.ProjectPairView({
+          lifeView.$el.appendTo("#main-div");
+          var lifeView2 = new SH.ProjectPairView({
             model: new SH.ProjectPair({
-              firstImgUrl: "images/jam_dashboard/dashboard-thumb.png",
-              secondImgUrl: "images/self_check_in/m-thumb.png",
-              firstImgOverlayText: "Dashboard",
-              secondImgOverlayText: "Self Check-In",
-              firstImgOverlayDescription: "UX, UI",
-              secondImgOverlayDescription: "UX, UI",
-              firstPageId: "jam_dashboard",
-              secondPageId: "self_check_in"
+              firstImgUrl: "images/invitation/invitation-thumb.png",
+              secondImgUrl: "images/seattle/seattle-thumb.png",
+              firstImgOverlayText: "Invitation",
+              secondImgOverlayText: "Seattle",
+              firstPageId: "invitation",
+              secondPageId: "seattle"
             })
           });
-          projectView2.$el.appendTo("#main-div");
-          var projectView3 = new SH.ProjectPairView({
-            model: new SH.ProjectPair({
-              firstImgUrl: "images/jam_custom/custom-thumb.png",
-              secondImgUrl: "images/lumira/lumira-thumb.png",
-              firstImgOverlayText: "Custom Home Page",
-              secondImgOverlayText: "SAP Lumira",
-              firstImgOverlayDescription: "UI, Branding",
-              secondImgOverlayDescription: "UX, UI",
-              firstPageId: "custom",
-              secondPageId: "lumira"
-            })
-          });
-          projectView3.$el.appendTo("#main-div");
+          lifeView2.$el.appendTo("#main-div");
 
-          var allViews = [projectView, projectView2, projectView3];
+          var allViews = [lifeView, lifeView2];
           var numToShow = Math.ceil($(window).height() / 420);
           var viewsToShow = allViews.slice(0, numToShow);
           var viewsToHide = allViews.slice(numToShow);
