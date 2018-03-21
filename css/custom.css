@@ -252,16 +252,28 @@ h4 {
 }
 
 .carousel-indicators li {
-  background-color: #848484;
-}
-
-.carousel-indicators li.active {
   background-color: #d8d8d8;
 }
 
+.carousel-indicators li.active {
+  background-color: #848484;
+}
+
 .carousel-control-container {
-  padding: 20px;
+  padding: 15px;
   background: #bebebe;
-  height: 60px;
+  height: 24px;
   border-radius: 50%;
+  box-sizing: content-box;
+  width: 24px;
+}
+
+.carousel-control-next:focus,
+.carousel-control-prev:focus {
+  opacity: 0.5;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  opacity: 0.9;
 }
