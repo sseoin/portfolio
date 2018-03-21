@@ -277,3 +277,20 @@ h4 {
 .carousel-control-prev:hover {
   opacity: 0.9;
 }
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.contact-chat {
+  margin-top: 100px;
+}
+
+.contact-chat h4 {
+  font-weight: 300;
+}
