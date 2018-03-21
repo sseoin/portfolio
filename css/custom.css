@@ -279,7 +279,7 @@ h4 {
 }
 
 .profile-description {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .contact-header {
@@ -288,11 +288,11 @@ h4 {
 
 .contact-header h1 {
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .contact-chat {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .contact-chat h4 {
