@@ -246,3 +246,22 @@ h4 {
     opacity: 1;
   }
 }
+
+.carousel-indicators {
+  bottom: -40px;
+}
+
+.carousel-indicators li {
+  background-color: #848484;
+}
+
+.carousel-indicators li.active {
+  background-color: #d8d8d8;
+}
+
+.carousel-control-container {
+  padding: 20px;
+  background: #bebebe;
+  height: 60px;
+  border-radius: 50%;
+}
