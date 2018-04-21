@@ -62,16 +62,15 @@
             </div>
             <div class="row contact-chat">
               <div class="col">
-                <h4>Let's chat. 
-                  <script type="text/javascript">
-                    var address = 'sarahsnhan@' + 'gmail.com';
-                    document.write('<span class="email">' + address + '</span>');
-                  </script>
-                </h4>
+                <h4>Let's chat. <span class="email"></span></h4>
               </div>
             </div>
           </div>
         </div>
+        <script type="text/javascript">
+          var address = 'sarahsnhan@' + 'gmail.com';
+          $(".email").text(address);
+        </script>
       </div>
     </main>
   </body>
