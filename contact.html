@@ -49,19 +49,28 @@
       <div id="main-div">
         <div class="slide-in">
           <div class="container contact-header">
+            <div class="row profile-name">
+              <div class="col">
+                <h1>Sarah Han <span id="name-noun">(n.)</span></h1>
+              </div>  
+            </div>
             <div class="row profile-description">
               <div class="col">
-                <h1>Product Designer, Innovator, storyteller.</h1>
-                <h1>Currently based on the west coast.</h1>
+                <h1>1. Product Designer; Innovator; Storyteller</h1>
+                <h1 class="secondary-description">Currently based on the west coast in Vancouver.</h1>
               </div>
             </div>
             <div class="row contact-chat">
               <div class="col">
-                <h4>Let's chat. <span class="email">sarahsnhan@gmail.com</span></h4>
+                <h4>Let's chat. <span class="email"></span></h4>
               </div>
             </div>
           </div>
         </div>
+        <script type="text/javascript">
+          var address = 'sarahsnhan@' + 'gmail.com';
+          $(".email").text(address);
+        </script>
       </div>
     </main>
   </body>

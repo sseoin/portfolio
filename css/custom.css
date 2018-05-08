@@ -278,18 +278,29 @@ h4 {
   opacity: 0.9;
 }
 
+#name-noun {
+  font-style: italic;
+  color: #999999;
+}
+
+.profile-name h1 {
+  font-size: 50px;
+}
+
 .profile-description {
-  margin-top: 60px;
+  margin-top: 40px;
+}
+
+.secondary-description {
+  margin-left: 33px;
 }
 
 .contact-header {
-  text-align: center;
   padding-bottom: 150px;
 }
 
 .contact-header h1 {
-  font-size: 50px;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .contact-chat {
