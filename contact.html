@@ -62,7 +62,7 @@
             </div>
             <div class="row contact-chat">
               <div class="col">
-                <h4>Let's chat. <span class="email"></span></h4>
+                <h4>Let's chat. <a class="email"></a></h4>
               </div>
             </div>
           </div>
@@ -70,6 +70,7 @@
         <script type="text/javascript">
           var address = 'sarahsnhan@' + 'gmail.com';
           $(".email").text(address);
+          $(".email").attr("href", "mailto:" + address);
         </script>
       </div>
     </main>
