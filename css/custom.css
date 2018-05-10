@@ -244,10 +244,19 @@ h4 {
   }
 }
 
+.secondary-description {
+  margin-top: 20px;
+}
+
 @media (min-width: 992px) {
   header {
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+
+  .secondary-description {
+    margin-left: 33px;
+    margin-top: 0px;
   }
 }
 
@@ -307,10 +316,6 @@ h4 {
 
 .profile-description {
   margin-top: 40px;
-}
-
-.secondary-description {
-  margin-left: 33px;
 }
 
 .contact-header {
